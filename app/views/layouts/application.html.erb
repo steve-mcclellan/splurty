@@ -24,34 +24,57 @@
       Splurting out unsolicited snark about game show fans since 2016
     </div>
     <div class="col-xs-5 links">
-      <%= link_to 'Contribute', new_quote_path %>
+      <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
       <%= link_to 'About', about_path %>
     </div>
   </header>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
+        </div>
+        <%= simple_form_for Quote.new do |f| %>
+          <div class="modal-body">          
+            <%= f.input :saying %>
+            <%= f.input :author %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Add Quote', class: 'btn btn-danger' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
   <hr />
   <br class="clear" />
 
-<div class="container">
-  <% if flash[:error].present? %>
-    <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
-      <%= flash[:error].html_safe %>
-    </div>
-    <br class="clear" />
-  <% end %>
-  <%= yield %>
-</div>
-
-<div class="footer">
   <div class="container">
-    <div class="col-xs-6">
-      <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
-    </div>
-    <div class="col-xs-6 footer-blurb">
-      Proudly hacked by Steve McClellan<br />
-      Want to build your own Splurty Web App? <a href="http://thefirehoseproject.com">Learn how to code here.</a>
+    <% if flash[:error].present? %>
+      <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
+        <%= flash[:error].html_safe %>
+      </div>
+      <br class="clear" />
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="col-xs-6">
+        <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
+      </div>
+      <div class="col-xs-6 footer-blurb">
+        Proudly hacked by Steve McClellan<br />
+        Want to build your own Splurty Web App? <a href="http://thefirehoseproject.com">Learn how to code here.</a>
+      </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>
