@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
+ruby '2.2.10'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '~> 4.2.7.1'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.18'
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.0'
@@ -47,6 +48,6 @@ end
 
 gem 'rails_12factor', group: :production
 gem 'bootstrap-sass', '~> 3.3.5.1'
-gem 'sprockets', '2.11.0'
+gem 'sprockets', '~> 2.12.5'
 gem 'sass-rails'
 gem 'simple_form'
