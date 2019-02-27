@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.10'
+ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.11'
@@ -47,7 +47,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor', group: :production
-gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sprockets', '~> 2.12.5'
 gem 'sass-rails'
 gem 'simple_form'
