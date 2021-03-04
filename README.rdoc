@@ -1,28 +1,19 @@
-== README
+== Splurty
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was part of the Firehose Project curriculum and my first ever web application.
+It's very unlikely to be useful to anyone, but it holds a special place in my heart.
 
-Things you may want to cover:
+It's a simple quote-generator app. Anyone can add a quote to it through the interface.
+When the main page is loaded, a random quote is grabbed from the database and displayed.
 
-* Ruby version
+I themed mine around my life-long passion, game shows. All of the "quotes" are
+completions of the statement, "You know you watch too many games shows when...".
 
-* System dependencies
+The application is live at http://splurty-steve-mcclellan.herokuapp.com. Refresh the
+page repeatedly to see the other quotes. Note that if you get even most of the
+references, you also watch too many game shows. :)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+If for some reason you want to play with your own copy of this, well it's just an
+extremely simple Ruby on Rails app. Make sure you have the version of Ruby listed in
+the Gemfile, run `bundle install` and `rails server`, then visit `localhost:3000`
+in a browser. Enjoy!
