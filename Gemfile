@@ -6,6 +6,11 @@ gem 'rails', '~> 6.0.0'
 
 gem 'webrick'
 
+# Needed bugfix for Ruby 3.1 with Rails 6
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 
